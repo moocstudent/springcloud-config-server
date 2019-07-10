@@ -7,6 +7,25 @@
 6. http://localhost:9411/zipkin/ 访问Find Traces,再查看依赖分析http://localhost:9411/zipkin/dependency/
 7. 使用config-server,就启动config-server的启动类
 
+访问配置信息的URL与配置文件的映射关系如下所示:
+	
+/{application}/{profile}[/{label}]
+	
+/{application}-{profile}.yml
+	
+/{label}/{application}-{profile}.yml
+	
+/{application}-{profile}.properties
+	
+/{label}/{application}-{profile}.properties
+
+上面的url会映射{application}-{profile}.properties对应的配置文件, 
+其中{label}对应Git上不同的分支,默认为master. 
+我们可以尝试构造不同的url来访问不同的配置内容,
+比如, 要访问config-label-test分支,helloukyo的prod环境,
+就访问  http://localhost:8030/helloukyo/prod/config-label-test
+
+
 ![img](zipkin1.png) <br>
 看到使用者是 Used by (所使用) , Uses (使用) <br>
 ![img](zipkin2.png) <br>
