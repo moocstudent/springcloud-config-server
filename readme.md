@@ -5,7 +5,7 @@
 4. students-view-service-feign一次
 5. 查看 http://127.0.0.1:8012/students 刷新几次 查看每次调用的不同服务(端口)
 6. http://localhost:9411/zipkin/ 访问Find Traces,再查看依赖分析http://localhost:9411/zipkin/dependency/
-
+7. 使用config-server,就启动config-server的启动类
 
 ![img](zipkin1.png) <br>
 看到使用者是 Used by (所使用) , Uses (使用) <br>

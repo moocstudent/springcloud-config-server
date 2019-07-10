@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
         <module name="eurekaserver" />
+        <module name="springcloud-config" />
         <module name="students-data-service" />
         <module name="students-view-service-feign" />
         <module name="zipkinzq" />
